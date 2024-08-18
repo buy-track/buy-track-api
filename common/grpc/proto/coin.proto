@@ -1,0 +1,47 @@
+syntax = 'proto3';
+import "common.proto";
+package coin;
+
+option go_package = "/services";
+
+
+service CoinService {
+  rpc Paginate (CoinQueryRequest) returns (CoinPaginate);
+  rpc GetByIds (IdsRequest) returns (CoinList);
+  rpc GetById (common.IdRequest) returns (Coin);
+  rpc GetBySymbol (SymbolRequest) returns (Coin);
+}
+
+message SymbolRequest{
+  string symbol = 1;
+}
+
+message IdsRequest{
+  repeated string id = 1;
+}
+
+message CoinQueryRequest {
+  int64 limit = 1;
+  int64 page = 2;
+}
+
+message CoinPaginate {
+  CoinList coins = 1;
+  int64 limit = 2;
+  int64 page = 3;
+}
+
+message CoinList {
+  repeated Coin coins = 1;
+}
+
+message Coin {
+  string createdAt = 1;
+  string updatedAt = 2;
+  int32 type = 3;
+  float price = 4;
+  string symbol = 5;
+  string name = 6;
+  string icon = 7;
+  string id = 8;
+}

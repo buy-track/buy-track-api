@@ -1,0 +1,26 @@
+VERSION: "1.0.0"
+
+LOG_LEVEl: "info"
+
+DATABASE:
+  DRIVER: "postgres"
+  HOST: "127.0.0.1"
+  PORT: "5432"
+  Name: "auth_app"
+  User: "root"
+  Password: "secret"
+
+Cache:
+  Driver: "redis"
+  Host: "127.0.0.1"
+  Password: ""
+  Port: "6379"
+  DB: "0"
+  Prefix: "cache_"
+
+
+Redis:
+  Host: "127.0.0.1"
+  Port: "6379"
+  Password: ""
+  DB: "0"

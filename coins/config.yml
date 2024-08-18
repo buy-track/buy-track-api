@@ -1,0 +1,33 @@
+VERSION: "1.0.0"
+
+LOG_LEVEl: "info"
+
+DATABASE:
+  DRIVER: "postgres"
+  HOST: "127.0.0.1"
+  PORT: "5432"
+  Name: "mystocks_coin_app"
+  User: "root"
+  Password: "secret"
+
+Broker:
+  Driver: "redis"
+  Host: "127.0.0.1"
+  Password: ""
+  Port: "6379"
+  DB: "0"
+
+Cache:
+  Driver: "redis"
+  Host: "127.0.0.1"
+  Password: ""
+  Port: "6379"
+  DB: "0"
+  Prefix: "cache_coin_"
+
+Redis:
+  Host: "127.0.0.1"
+  Port: "6379"
+  Password: ""
+  DB: "1"
+

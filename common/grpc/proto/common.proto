@@ -1,0 +1,9 @@
+syntax = 'proto3';
+
+package common;
+
+option go_package = "/services";
+
+message IdRequest{
+  string id = 1;
+}
